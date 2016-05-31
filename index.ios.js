@@ -12,7 +12,8 @@ class MapDemo extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Text>Hello, Map</Text>
+      <Text style={styles.header}>Hello, Map</Text>
+
         <MapView
             style={styles.map}
             initialRegion={{
@@ -30,15 +31,25 @@ class MapDemo extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    height: Dimensions.get('window').height,
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
+  },
+  header: {
+    backgroundColor: 'black',
+    color: '#87e2b3',
+    fontFamily: 'Courier',
+    fontWeight: 'bold',
+    fontSize: 20,
+    paddingTop: 50,
+    paddingBottom: 50,
+    textAlign: 'center',
   },
   map: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
     bottom: 0,
+    left: 0,
+    position: 'absolute',
+    top: 100,
+    right: 0,
   },
 });
 
